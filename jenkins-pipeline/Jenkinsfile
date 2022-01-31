@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                git 'https://github.com/kiranpithani/jenkins.git'
+                git "https://github.com/kiranpithani/jenkins/commit/d29dc80a2f1d106ca0b78bd66af7d07b9fac7ee7"
         }
         }
         stage ('mvn') {
