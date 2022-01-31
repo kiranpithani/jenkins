@@ -1,0 +1,13 @@
+pipeline {
+    agent { lable 'MVN_3.8.4'}
+    stages {
+        stage('git') {
+        steps {
+            git 'https://github.com/kiranpithani/jenkins.git'
+        }
+        }
+        stage ('mvn') {
+            sh "mvn package"
+        }
+    }
+    }
