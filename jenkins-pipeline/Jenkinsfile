@@ -3,6 +3,11 @@ node('JVM_3.8.4') {
         git 'https://github.com/kiranpithani/jenkins.git'
     }
     stage('build'){
+        sh '''
+            echo "PATH=${PATH}"
+            echo "M2_HOME=${M2_HOME}"
+
+        '''    
         sh 'mvn clean package'
     }
     stage('archive'){
