@@ -1,0 +1,11 @@
+node('JVM_3.8.4') {
+    stage('git') {
+        git 'https://github.com/kiranpithani/jenkins.git'
+    }
+    stage('build'){
+        sh 'mvn clean package'
+    }
+    stage('archive'){
+        archive 'target/*.jar'
+    }
+}
