@@ -1,6 +1,6 @@
 node('jdk11-mvn3.8.4') {
     stage('git') {
-        git url: 'https://github.com/kiranpithani/jenkins.git', branch: "${params.BRANCH_TO_BUILD} 
+        git url: 'https://github.com/kiranpithani/jenkins.git', branch: "${params.BRANCH_TO_BUILD}"
     }
     stage('build') {
             sh '''
